@@ -152,6 +152,7 @@ module.exports = function (RED) {
                 });
 
                 socket.on('close', function () {
+                    socket.end();
                     delete connectionPool[id];
                 });
 
